@@ -30,8 +30,5 @@ class Migration(migrations.Migration):
             options={
                 'abstract': False,
             },
-            managers=[
-                ('objects', django.db.models.manager.Manager()),
-            ],
         ),
     ]
