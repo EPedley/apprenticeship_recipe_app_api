@@ -110,7 +110,7 @@ class PublicUserApiTests(TestCase):
         self.assertNotIn('token', res.data)
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
 
-    def test_retrieve_user_unathorised(self):
+    def test_retrieve_user_unathorized(self):
         """Test authentication is required for users."""
         res = self.client.get(ME_URL)
 
@@ -118,7 +118,7 @@ class PublicUserApiTests(TestCase):
 
 
 class PrivateUserApiTests(TestCase):
-    """Test API requrests that require authentication."""
+    """Test API requests that require authentication."""
 
     def setUp(self):
         self.user = create_user(
